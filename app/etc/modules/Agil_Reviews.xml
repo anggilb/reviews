@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Agil_Reviews>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Agil_Reviews>
+    </modules>
+</config> 

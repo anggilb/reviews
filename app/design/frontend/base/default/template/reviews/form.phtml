@@ -1,0 +1,69 @@
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="page-title">
+    <h1><?php echo Mage::helper('reviews')->__('Review') ?></h1>
+</div>
+<form action="<?php echo Mage::getUrl('reviews/index/post') ?>" id="reviewForm" method="post">
+    <input type="hidden" name="order_id" value="<?php echo Mage::registry('order_id'); ?>">
+    <div class="fieldset">
+        <h2 class="legend"><?php echo Mage::helper('reviews')->__('Add new Review') ?></h2>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="field">
+                    <label for="delivery" class="required"><em>*</em><?php echo Mage::helper('reviews')->__('Delivery') ?></label>
+                    <div class="input-box">
+                        <select name="delivery" id="delivery" class="input-select required-entry" style="width: 50px;">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="product" class="required"><em>*</em><?php echo Mage::helper('reviews')->__('Product') ?></label>
+                    <div class="input-box">
+                        <select name="product" id="product" class="input-select required-entry" style="width: 50px;">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label for="customer_care" class="required"><em>*</em><?php echo Mage::helper('reviews')->__('Customer Care') ?></label>
+                <div class="input-box">
+                    <select name="customer_care" id="customer_care" class="input-select required-entry" style="width: 50px;">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </li>
+            <li class="wide">
+                <label for="comment" class="required"><em>*</em><?php echo Mage::helper('reviews')->__('Comment') ?></label>
+                <div class="input-box">
+                    <textarea name="comment" id="comment" title="<?php echo Mage::helper('reviews')->__('Comment') ?>" class="required-entry input-text" cols="5" rows="3"></textarea>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="buttons-set">
+        <p class="required"><?php echo Mage::helper('reviews')->__('* Required Fields') ?></p>
+        <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+        <button type="submit" title="<?php echo Mage::helper('reviews')->__('Submit') ?>" class="button"><span><span><?php echo Mage::helper('reviews')->__('Submit') ?></span></span></button>
+    </div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    var reviewForm = new VarienForm('reviewForm', true);
+//]]>
+</script>

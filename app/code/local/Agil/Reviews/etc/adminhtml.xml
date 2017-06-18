@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <agil>
+            <title>Agil</title>
+            <sort_order>160</sort_order>
+            <children>
+                <index>
+                    <title>Reviews</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/reviews/index</action>
+                </index>
+            </children>
+        </agil>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <reviews>
+                                        <title>Reviews</title>
+                                    </reviews>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
